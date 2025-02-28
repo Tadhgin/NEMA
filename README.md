@@ -21,4 +21,8 @@ FUTURE
 
 Games Note taker Reminders Info grab ability like weather/time Storage management Task Manager
 
+<<<<<<< HEAD
 Caelum~
+=======
+Caelum~
+>>>>>>> 6bceaa8cc1379c8006fd42b28326c67c40ace4d8
