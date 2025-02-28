@@ -1,0 +1,26 @@
+.container {
+    width: 250px;
+    background: #1e1e1e;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 2px solid #292929;
+  }
+  
+  .nav-item {
+    cursor: pointer;
+    padding: 12px;
+    background: #292929;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .nav-item:hover {
+    background: #3a3a3a;
+    transform: scale(1.05);
+  }
+  

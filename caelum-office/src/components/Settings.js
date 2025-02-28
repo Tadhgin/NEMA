@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const Settings = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const [notifications, setNotifications] = useState(false);
+  const [autoSync, setAutoSync] = useState(false);
 
   return (
     <Container>
@@ -18,12 +20,16 @@ const Settings = () => {
 
       <SettingItem>
         <label>Notification Sounds:</label>
-        <ToggleButton>Coming Soon</ToggleButton>
+        <ToggleButton onClick={() => setNotifications(!notifications)}>
+          {notifications ? "Enabled" : "Disabled"}
+        </ToggleButton>
       </SettingItem>
 
       <SettingItem>
         <label>File Auto-Sync:</label>
-        <ToggleButton>Coming Soon</ToggleButton>
+        <ToggleButton onClick={() => setAutoSync(!autoSync)}>
+          {autoSync ? "Enabled" : "Disabled"}
+        </ToggleButton>
       </SettingItem>
     </Container>
   );
@@ -37,6 +43,7 @@ const Container = styled.div`
   color: white;
   border-radius: 8px;
   max-width: 600px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 `;
 
 const SettingItem = styled.div`
@@ -56,7 +63,7 @@ const ToggleButton = styled.button`
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 
   &:hover {
     background: #4a4a4a;

@@ -1,0 +1,32 @@
+.container {
+    padding: 20px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 8px;
+    max-width: 600px;
+  }
+  
+  .setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: #292929;
+    border-radius: 8px;
+  }
+  
+  .toggle-button {
+    background: #3a3a3a;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .toggle-button:hover {
+    background: #4a4a4a;
+  }
+  

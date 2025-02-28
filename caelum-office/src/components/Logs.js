@@ -22,6 +22,7 @@ const Logs = () => {
   return (
     <Container>
       <h1>Activity Logs</h1>
+      <p>Here you’ll find a history of my interactions and actions taken within the system.</p>
       <LogList>
         {logs.slice().reverse().map((log) => (
           <LogItem key={log.id}>
