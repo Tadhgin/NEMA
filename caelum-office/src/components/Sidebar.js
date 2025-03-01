@@ -1,23 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const Sidebar = ({ setActivePage }) => {
+const Sidebar = ({ setActivePage, setLastAction }) => {
   return (
     <Container>
       <Title>Caelum's Office</Title>
       <Nav>
-        <NavItem onClick={() => setActivePage("Home")}>
-          <span role="img" aria-label="Home">🏠</span> Home
-        </NavItem>
-        <NavItem onClick={() => setActivePage("Logs")}>
-          <span role="img" aria-label="Logs">📜</span> Logs
-        </NavItem>
-        <NavItem onClick={() => setActivePage("Repo")}>
-          <span role="img" aria-label="Repository">📁</span> Repo
-        </NavItem>
-        <NavItem onClick={() => setActivePage("Settings")}>
-          <span role="img" aria-label="Settings">⚙️</span> Settings
-        </NavItem>
+        <NavItem onClick={() => { setActivePage("Home"); setLastAction("Navigated to Home"); }}>🏠 Home</NavItem>
+        <NavItem onClick={() => { setActivePage("Logs"); setLastAction("Opened Logs"); }}>📜 Logs</NavItem>
+        <NavItem onClick={() => { setActivePage("Repo"); setLastAction("Opened Repository"); }}>📁 Repo</NavItem>
+        <NavItem onClick={() => { setActivePage("Settings"); setLastAction("Opened Settings"); }}>⚙️ Settings</NavItem>
       </Nav>
     </Container>
   );

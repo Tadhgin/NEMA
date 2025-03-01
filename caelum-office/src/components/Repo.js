@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const Repo = () => {
+const Repo = ({ setLastAction }) => {
   const initialFiles = [
     { id: 1, name: "README.md", type: "file", content: "This is the README file content." },
     { id: 2, name: "src", type: "folder", expanded: false, children: [
@@ -35,12 +35,14 @@ const Repo = () => {
   const openFile = (file) => {
     setSelectedFile(file);
     setEditedContent(file.content);
+    setLastAction(`Opened ${file.name}`);
   };
 
   const saveFile = () => {
     setFiles(files.map(file =>
       file.id === selectedFile.id ? { ...file, content: editedContent } : file
     ));
+    setLastAction(`Saved ${selectedFile.name}`);
     setSelectedFile(null);
   };
 
@@ -55,14 +57,7 @@ const Repo = () => {
               type={file.type}
               onClick={() => file.type === "folder" ? toggleFolder(file.id) : openFile(file)}
             >
-              {file.type === "folder" ? (
-                <span role="img" aria-label={file.expanded ? "open folder" : "closed folder"}>
-                  {file.expanded ? "📂" : "📁"}
-                </span>
-              ) : (
-                <span role="img" aria-label="document">📄</span>
-              )} 
-              {file.name}
+              {file.type === "folder" ? (file.expanded ? "📂" : "📁") : "📄"} {file.name}
             </FileItem>
             {file.type === "folder" && file.expanded && (
               <SubFileList>
@@ -72,7 +67,7 @@ const Repo = () => {
                     type={child.type}
                     onClick={() => openFile(child)}
                   >
-                    <span role="img" aria-label="document">📄</span> {child.name}
+                    📄 {child.name}
                   </FileItem>
                 ))}
               </SubFileList>
@@ -80,100 +75,8 @@ const Repo = () => {
           </React.Fragment>
         ))}
       </FileList>
-
-      {selectedFile && (
-        <FileEditor>
-          <h2>Editing: {selectedFile.name}</h2>
-          <TextArea 
-            value={editedContent} 
-            onChange={(e) => setEditedContent(e.target.value)} 
-          />
-          <ButtonContainer>
-            <SaveButton onClick={saveFile}>Save</SaveButton>
-            <CloseButton onClick={() => setSelectedFile(null)}>Cancel</CloseButton>
-          </ButtonContainer>
-        </FileEditor>
-      )}
     </Container>
   );
 };
 
 export default Repo;
-
-const Container = styled.div`
-  padding: 20px;
-  background: #1e1e1e;
-  color: white;
-  border-radius: 8px;
-  max-width: 600px;
-`;
-
-const FileList = styled.ul`
-  margin-top: 15px;
-  padding: 0;
-`;
-
-const SubFileList = styled.ul`
-  padding-left: 20px;
-`;
-
-const FileItem = styled.li`
-  background: ${({ type }) => (type === "folder" ? "#3a3a3a" : "#292929")};
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    background: ${({ type }) => (type === "folder" ? "#4a4a4a" : "#3a3a3a")};
-    transform: scale(1.03);
-  }
-`;
-
-const FileEditor = styled.div`
-  background: #292929;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  color: white;
-  width: 100%;
-  max-width: 600px;
-`;
-
-const TextArea = styled.textarea`
-  width: 100%;
-  height: 150px;
-  background: #181818;
-  color: white;
-  border: 1px solid #444;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 5px;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-`;
-
-const SaveButton = styled.button`
-  background: #00aa00;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-`;
-
-const CloseButton = styled.button`
-  background: #ff4444;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-`;
