@@ -39,4 +39,4 @@ Thumbs.db
 /coverage
 
 # --- LOCAL CONFIG & STATE FILES ---
-/src/api/githubToken.js
+.env
