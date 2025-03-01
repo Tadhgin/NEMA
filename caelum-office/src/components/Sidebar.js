@@ -6,10 +6,18 @@ const Sidebar = ({ setActivePage }) => {
     <Container>
       <Title>Caelum's Office</Title>
       <Nav>
-        <NavItem onClick={() => setActivePage("Home")}>🏠 Home</NavItem>
-        <NavItem onClick={() => setActivePage("Logs")}>📜 Logs</NavItem>
-        <NavItem onClick={() => setActivePage("Repo")}>📁 Repo</NavItem>
-        <NavItem onClick={() => setActivePage("Settings")}>⚙️ Settings</NavItem>
+        <NavItem onClick={() => setActivePage("Home")}>
+          <span role="img" aria-label="Home">🏠</span> Home
+        </NavItem>
+        <NavItem onClick={() => setActivePage("Logs")}>
+          <span role="img" aria-label="Logs">📜</span> Logs
+        </NavItem>
+        <NavItem onClick={() => setActivePage("Repo")}>
+          <span role="img" aria-label="Repository">📁</span> Repo
+        </NavItem>
+        <NavItem onClick={() => setActivePage("Settings")}>
+          <span role="img" aria-label="Settings">⚙️</span> Settings
+        </NavItem>
       </Nav>
     </Container>
   );

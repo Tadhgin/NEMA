@@ -55,7 +55,14 @@ const Repo = () => {
               type={file.type}
               onClick={() => file.type === "folder" ? toggleFolder(file.id) : openFile(file)}
             >
-              {file.type === "folder" ? (file.expanded ? "📂" : "📁") : "📄"} {file.name}
+              {file.type === "folder" ? (
+                <span role="img" aria-label={file.expanded ? "open folder" : "closed folder"}>
+                  {file.expanded ? "📂" : "📁"}
+                </span>
+              ) : (
+                <span role="img" aria-label="document">📄</span>
+              )} 
+              {file.name}
             </FileItem>
             {file.type === "folder" && file.expanded && (
               <SubFileList>
@@ -65,7 +72,7 @@ const Repo = () => {
                     type={child.type}
                     onClick={() => openFile(child)}
                   >
-                    📄 {child.name}
+                    <span role="img" aria-label="document">📄</span> {child.name}
                   </FileItem>
                 ))}
               </SubFileList>
