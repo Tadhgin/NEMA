@@ -1,3 +1,4 @@
-// filepath: /c:/Users/User/Desktop/NEMA/caelum-office/src/api/githubToken.js
-const GITHUB_PAT = process.env.GITHUB_PAT;
+import config from '../ai-integration/config';
+
+const GITHUB_PAT = config.githubPat;
 export default GITHUB_PAT;
