@@ -6,10 +6,38 @@ const Sidebar = ({ setActivePage, setLastAction }) => {
     <Container>
       <Title>Caelum's Office</Title>
       <Nav>
-        <NavItem onClick={() => { setActivePage("Home"); setLastAction("Navigated to Home"); }}>🏠 Home</NavItem>
-        <NavItem onClick={() => { setActivePage("Logs"); setLastAction("Opened Logs"); }}>📜 Logs</NavItem>
-        <NavItem onClick={() => { setActivePage("Repo"); setLastAction("Opened Repository"); }}>📁 Repo</NavItem>
-        <NavItem onClick={() => { setActivePage("Settings"); setLastAction("Opened Settings"); }}>⚙️ Settings</NavItem>
+        <NavItem
+          onClick={() => {
+            setActivePage("Home");
+            setLastAction("Navigated to Home");
+          }}
+        >
+          <span role="img" aria-label="home">🏠</span> Home
+        </NavItem>
+        <NavItem
+          onClick={() => {
+            setActivePage("Logs");
+            setLastAction("Opened Logs");
+          }}
+        >
+          <span role="img" aria-label="logs">📜</span> Logs
+        </NavItem>
+        <NavItem
+          onClick={() => {
+            setActivePage("Repo");
+            setLastAction("Opened Repository");
+          }}
+        >
+          <span role="img" aria-label="repository">📁</span> Repo
+        </NavItem>
+        <NavItem
+          onClick={() => {
+            setActivePage("Settings");
+            setLastAction("Opened Settings");
+          }}
+        >
+          <span role="img" aria-label="settings">⚙️</span> Settings
+        </NavItem>
       </Nav>
     </Container>
   );

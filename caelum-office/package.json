@@ -47,12 +47,15 @@
     "lodash": "^4.17.21",
     "mime": "^1.6.0",
     "nodemon": "^3.1.9",
+    "nth-check": "^2.0.1",
     "os-browserify": "^0.3.0",
     "path": "^0.12.7",
+    "postcss": "^8.4.31",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
+    "resolve-url-loader": "^5.0.0",
     "styled-components": "^5.3.11",
     "uuid": "^11.1.0",
     "webpack": "^5.98.0",
@@ -68,6 +71,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babel-preset-jest": "^27.5.1",
     "babel-preset-react-app": "^10.1.0",
+    "customize-cra": "^1.0.0",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-flowtype": "^8.0.3",
@@ -109,5 +113,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://myname.github.io/myapp"
+  "homepage": "http://myname.github.io/myapp",
+  "resolutions": {
+    "nth-check": "2.0.1",
+    "postcss": "8.4.31"
+  }
 }
