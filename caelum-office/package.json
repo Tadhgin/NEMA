@@ -39,7 +39,6 @@
     "core-js": "^3.40.0",
     "cors": "^2.8.5",
     "crypto-browserify": "^3.12.1",
-    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "fs-extra": "^10.1.0",
     "glob": "^7.2.3",
