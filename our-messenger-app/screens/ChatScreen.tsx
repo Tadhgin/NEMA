@@ -14,9 +14,16 @@ const ChatScreen = () => {
             <FlatList
                 data={messages}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <ChatBubble text={item.text} sender={item.sender} />}
+                renderItem={({ item }) => (
+                    <ChatBubble text={item.text} sender={item.sender} />
+                )}
             />
-            <MessageInput onSendMessage={(text) => send(text, "me")} />
+            <MessageInput
+                onSendMessage={(text) => {
+                    // Send the user's message as-is, no forced commands or prompts
+                    send(text, "me");
+                }}
+            />
         </View>
     );
 };

@@ -1,13 +1,19 @@
 import { useState } from "react";
-import { getMessages, sendMessage } from "../backend/messageService";
+
+type Message = {
+  id: string;
+  text: string;
+  sender: string;
+};
 
 export const useChat = () => {
-    const [messages, setMessages] = useState(getMessages());
+  const [messages, setMessages] = useState<Message[]>([]);
 
-    const send = (text: string, sender: string) => {
-        const newMessage = sendMessage(text, sender);
-        setMessages([...messages, newMessage]);
-    };
+  const send = (text: string, sender: string) => {
+    // Add the sender's message to the chat
+    const newMessage = { id: Date.now().toString(), text, sender };
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
+  };
 
-    return { messages, send };
+  return { messages, send };
 };
