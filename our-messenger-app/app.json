@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Our Messenger App",
+    "slug": "our-messenger-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0078ff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0078ff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "platforms": ["ios", "android", "web"]
+  }
+}
