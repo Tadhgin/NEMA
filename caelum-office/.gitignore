@@ -17,7 +17,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment variables
-/caelum-office/.env
+.env
 
 # Editor directories and files
 .vscode/
