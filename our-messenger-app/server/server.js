@@ -4,7 +4,7 @@ const cors = require('cors');
 const { OpenAI } = require('openai');
 
 const app = express();
-const PORT = 19006; // Updated port to 19006
+const PORT = 3000; // Updated port to 19006
 
 // Initialize OpenAI client with the API key from the .env file
 const openai = new OpenAI({
