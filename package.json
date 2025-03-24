@@ -14,9 +14,13 @@
     "@jridgewell/sourcemap-codec": "^1.5.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@sideway/address": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "eslint": "^9.21.0",
     "expo": "^52.0.40",
+    "express": "^4.21.2",
     "joi": "^17.13.3",
+    "openai": "^4.89.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
