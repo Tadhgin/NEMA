@@ -1,0 +1,6 @@
+
+gpiod
+opencv-python
+gpiozero
+numpy
+pyaudio

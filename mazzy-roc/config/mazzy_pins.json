@@ -1,0 +1,22 @@
+{
+  "motors": {
+    "left_track_forward": 17,
+    "left_track_backward": 27,
+    "right_track_forward": 22,
+    "right_track_backward": 23
+  },
+  "servos": {
+    "pan_servo": 5,
+    "tilt_servo": 6
+  },
+  "led_face": {
+    "data_pin": 12
+  },
+  "speaker": {
+    "audio_pin": 13
+  },
+  "sensors": {
+    "distance_sensor": 16,
+    "motion_sensor": 20
+  }
+}
