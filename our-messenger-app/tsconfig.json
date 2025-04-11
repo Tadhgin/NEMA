@@ -1,13 +1,31 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@screens/*": [
+        "screens/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@navigation/*": [
+        "navigation/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@backend/*": [
+        "backend/*"
+      ]
+    },
     "jsx": "react-native",
     "strict": true,
-    "skipLibCheck": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "noEmit": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "extends": "expo/tsconfig.base"
 }
