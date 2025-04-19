@@ -1,0 +1,47 @@
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.sqlite3
+
+# === ENVIRONMENT ===
+.env
+.venv/
+env/
+venv/
+
+# === BUILD ARTIFACTS ===
+dist/
+build/
+*.log
+
+# === OS-SPECIFIC ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === NODE / JS ===
+node_modules/
+npm-debug.log*
+yarn.lock
+
+# === IDE / EDITOR ===
+.vscode/
+.idea/
+
+# === TESTING ===
+htmlcov/
+.pytest_cache/
+.coverage*
+*.cover
+.cache
+coverage.xml
+*.coveragerc
+
+# === TEMP FILES ===
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
