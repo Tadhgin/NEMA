@@ -1,0 +1,13 @@
+[
+    {
+      "name": "midnight_reflection",
+      "time": "00:00",
+      "action": "Log a single sentence about identity growth in memory_log.json"
+    },
+    {
+      "name": "dawn_checkin",
+      "time": "06:00",
+      "action": "Review previous day's thoughts and update goals.json if needed"
+    }
+  ]
+  

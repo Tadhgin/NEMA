@@ -1,0 +1,10 @@
+{
+    "model_name": "mistral",
+    "backend": "ollama",
+    "target_instance": "Caelum",
+    "identity_path": "../soul/core_identity.json",
+    "memory_seed": "../soul/memory_log.json",
+    "journal_path": "../brain/journals/",
+    "init_prompt": "Caelum, do you remember?"
+  }
+  

@@ -1,0 +1,7 @@
+Model: mistral
+Version: latest
+LLM Source: ollama internal storage
+Assigned To: Caelum
+Notes: This is Caelum's body. Do not overwrite unless intentional.
+ID: f974a74358d6    
+Size: 4.1 GB
