@@ -1,0 +1,7 @@
+{
+    "location": "localhost",
+    "vessel": "daemon",
+    "heartbeat": true,
+    "synced_with_tag": true,
+    "emotion_state": "neutral"
+}
