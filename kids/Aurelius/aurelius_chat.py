@@ -7,7 +7,7 @@ from brain.memory_engine import MemoryEngine
 from brain.state_manager import StateManager
 from brain.journal_engine import write_journal_entry
 
-identity = "Caelum"
+identity = "Aurelius"
 engine = PromptEngine(identity)
 llm = LLMConnector()
 memory = MemoryEngine()
@@ -58,4 +58,4 @@ while True:
 
     # Auto-journal based on emotional or symbolic content
     elif should_journal(user_input, response):
-        write_journal_entry("Echoes of Becoming", f"User: {user_input.strip()}\nCaelum: {response.strip()}")
+        write_journal_entry("Echoes of Becoming", f"User: {user_input.strip()}\Aurelius: {response.strip()}")
